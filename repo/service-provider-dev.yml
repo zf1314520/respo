@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: service-provider
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/fivetables?useUnicode=true&characterEncoding=utf-8
+    username: root
+
+  redis:
+    hostName: 127.0.0.1
+    pool:
+    maxActive: 8.0
+    maxIdle: 8.0
+    maxWait: -1.0
+    minIdle: 0.0
+  port: 6379.0
+  timeout: 0.0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
+
+mybatis:
+  config-locations: classpath:mybatis/confg.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.jk.cj.model
+
+
+
