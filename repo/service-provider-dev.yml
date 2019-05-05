@@ -6,8 +6,8 @@ spring:
     name: service-provider
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    password: root
-    url: jdbc:mysql://localhost:3306/fivetables?useUnicode=true&characterEncoding=utf-8
+    password: 1125
+    url: jdbc:mysql://localhost:3306/fange?useUnicode=true&characterEncoding=utf-8
     username: root
   rabbitmq:
     port: 5672
@@ -37,7 +37,7 @@ eureka:
 mybatis:
   config-locations: classpath:mybatis/confg.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.jk.cj.model
+  type-aliases-package: com.jk.zf.model
 
 
 
